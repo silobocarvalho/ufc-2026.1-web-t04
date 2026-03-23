@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        mark {
+            background-color: lightgreen;
+            color: rgb(241, 124, 0);
+            font-weight: bold;
+        }
+
+        progress {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-progress-bar {
+            background-color: orange;
+        }
+    </style>
+
+</head>
+
+<header>
+    <h1>Bem-vindo ao meu site</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h3>Este é meu titulo h3</h3>
+    <p>Aqui eu posso trazer informacoes sobre os <mark>projetos</mark> que estao sendo <mark>desenvolvidos</mark> na
+        disciplina.</p>
+
+    <label for="file-download">Progresso do download:</label>
+    <progress id="file-download" value="30" max="100"></progress>
+
+    <hr>
+
+    <form oninput="result.value=parseInt(a.value) + parseInt(b.value)">
+        <label for="a">Número 1:</label>
+        <input type="number" id="a" name="a" value="0">
+
+        <label for="b">Número 2:</label>
+        <input type="number" id="b" name="b" value="0">
+
+        <p>Resultado: <output name="result" for="a b">0</output></p>
+    </form>
+
+<hr>
+
+<details>
+    <summary>Capítulo 1: Introdução à Programação</summary>
+    <p>Este capítulo cobre os conceitos básicos de lógica e linguagens de programação.</p>
+    <details>
+        <summary>Seção 1.1: O que é um algoritmo?</summary>
+        <p>Um algoritmo é uma sequência de passos para resolver um problema.</p>
+    </details>
+    <details>
+        <summary>Seção 1.2: Linguagens de programação populares</summary>
+        <p>Python, JavaScript, Java e C++ são exemplos de linguagens amplamente usadas.</p>
+    </details>
+</details>
+
+
+
+</main>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</html>
