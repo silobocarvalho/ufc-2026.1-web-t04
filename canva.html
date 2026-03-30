@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de &lt;canvas&gt;</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de Canvas</h1>
+
+    <!-- Definindo o espaço para o canvas -->
+    <canvas id="myCanvas" width="400" height="400">
+        Seu navegador não suporta a tag canvas.
+    </canvas>
+
+
+    <script>
+        // Obtendo o elemento canvas e seu contexto de desenho
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Definindo as propriedades do desenho
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = 100;
+
+        // Desenhando um círculo preenchido
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'skyblue';
+        ctx.fill();
+
+        // Desenhando o contorno do círculo
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'darkblue';
+        ctx.stroke();
+
+        // Adicionando um texto no canvas
+        ctx.font = '20px Arial';
+        ctx.fillStyle = 'black';
+        ctx.textAlign = 'center';
+        ctx.fillText('Olá, Canvas!', centerX, centerY + radius + 30);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma Web</title>
+      <noscript>
+    <p style="color: red;">Aviso: Este site requer JavaScript para funcionar corretamente. Por favor, ative-o no seu navegador.</p>
+  </noscript>
+</head>
+
+<body>
+    <h1>Exemplo com Áudio e Vídeo Públicos</h1>
+
+    <h2>Reprodução de Áudio</h2>
+    <audio controls>
+        <source src="https://www.eesoundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+    <hr>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://www.example.com/audio/song.ogg" type="audio/ogg">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+    <hr>
+    <h2>Reprodução de Vídeo com Legenda</h2>
+    <video controls width="400">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb_backup.mp4" type="video/mp4">
+        <track src="https://www.w3schools.com/html/mov_bbb_subtitles_en.vtt" kind="subtitles" srclang="en"
+            label="English">
+        <track src="https://www.w3schools.com/html/mov_bbb_subtitles_fr.vtt" kind="subtitles" srclang="fr"
+            label="Français">
+        <track src="https://www.w3schools.com/html/mov_bbb_subtitles_val.vtt" kind="subtitles" srclang="va"
+            label="Alto Valiriano">
+        Seu navegador não suporta a reprodução de vídeo.
+    </video>
+
+    <hr>
+    <label>Selecione a cor da parede:</label>
+    <input type="color">
+    <hr>
+    <input type="month">
+    <hr>
+    <input type="week">
+    <hr>
+    <form action="/exemplo.jsp">
+        <input type="url">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+    </datalist>
+    <hr>
+    <progress value="30" max="100">Quanto falta?</progress>
+    <br>
+    <label for="cedro">Nível acude Cedro: </label>
+    <meter id="cedro" low="20" value="60" min="1" max="100"></meter>
+    <hr>
+    <form action="/processar-hobbies" method="post">
+        <label for="hobbies">Escolha seus hobbies favoritos:</label>
+        <br>
+        <select id="hobbies" multiple size="3" name="hobbies">
+            <option value="musica">Música</option>
+            <option value="esportes">Esportes</option>
+            <option value="viagem">Viagem</option>
+            <option value="leitura">Leitura</option>
+            <option value="cozinhar">Cozinhar</option>
+            <option value="jogos">Jogos</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

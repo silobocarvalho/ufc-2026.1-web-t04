@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de SVG</title>
+  <style>
+    svg {
+      display: block;
+      margin: 20px auto;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Gráfico SVG</h1>
+ 
+  <!-- Gráfico SVG -->
+  <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definindo um gradiente radial -->
+    <defs>
+      <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color: skyblue; stop-opacity: 1" />
+        <stop offset="100%" style="stop-color: darkblue; stop-opacity: 1" />
+      </radialGradient>
+    </defs>
+   
+    <!-- Um círculo preenchido com o gradiente -->
+    <circle cx="200" cy="200" r="100" fill="url(#grad1)" />
+   
+    <!-- Adicionando um texto no centro -->
+    <text x="200" y="210" font-family="Arial" font-size="20" text-anchor="middle" fill="white">
+      SVG Example
+    </text>
+  </svg>
+</body>
+</html>
+
