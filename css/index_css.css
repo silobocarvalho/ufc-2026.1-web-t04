@@ -1,0 +1,28 @@
+    h2 {
+        color: rgb(23, 2, 255);
+        background-color: rgba(244, 1, 1, 0.9);
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 20px;
+        color: coral;
+        text-align: center;
+    }
+
+    .tudo_azul {
+        color: blue;
+    }
+
+    #titulo2 {
+        color: coral;
+    }
+
+    /*
+  span.a{
+    color: rgb(47, 255, 0);
+  }
+    */
+    p .a {
+        color: rgb(47, 255, 0);
+    }
