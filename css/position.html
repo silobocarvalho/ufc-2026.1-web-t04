@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastering CSS Position</title>
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            height: 2000px; /* Altura extra para testar o Scroll */
+            padding-top: 80px; /* Espaço para o header fixed não cobrir o conteúdo */
+        }
+
+        /* 1. FIXED: A barra de navegação sempre visível */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #2d3436;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000; /* Garante que fique acima de tudo */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .layout-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 2. RELATIVE: O "pai" que serve de âncora */
+        .product-card {
+            position: relative;
+            flex: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 3. ABSOLUTE: O selo flutuante dentro do card */
+        .promo-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff7675;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transform: rotate(5deg);
+        }
+
+        /* 4. STATIC: Conteúdo que segue o fluxo normal */
+        .product-info h1, .product-info p {
+            position: static;
+            margin-bottom: 15px;
+            color: #2d3436;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: #dfe6e9;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        /* 5. STICKY: O painel de compra que te persegue no scroll */
+        .sidebar-purchase {
+            position: sticky;
+            top: 80px; /* Ele "gruda" 80px do topo da janela */
+            flex: 1;
+            height: fit-content;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #6c5ce7;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #6c5ce7;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .scroll-notice {
+            margin-top: 50px;
+            text-align: center;
+            color: #636e72;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <strong>LOGO E-COMMERCE (Fixed)</strong>
+    </nav>
+
+    <div class="layout-container">
+       
+        <article class="product-card">
+           
+            <div class="promo-badge">OFERTA ESPECIAL</div>
+
+            <div class="product-image">FOTO DO PRODUTO</div>
+
+            <div class="product-info">
+                <h1>Tênis Ultra Boost 2026</h1>
+                <p>O melhor tênis para corrida com tecnologia de amortecimento espacial. Sinta o conforto em cada passo e melhore sua performance instantaneamente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </article>
+
+        <aside class="sidebar-purchase">
+            <h3>R$ 899,00</h3>
+            <p style="font-size: 0.8em; margin-bottom: 20px;">Disponível em estoque</p>
+            <a href="#" class="btn-buy">ADICIONAR AO CARRINHO</a>
+            <p style="margin-top: 15px; font-size: 0.7em; color: #636e72;">
+                Este quadro vai te acompanhar enquanto você rola a página para ler os detalhes!
+            </p>
+        </aside>
+
+    </div>
+
+    <div class="scroll-notice">
+        <p>↓ Continue rolando para ver o efeito do <strong>Sticky</strong> e do <strong>Fixed</strong> ↓</p>
+    </div>
+
+</body>
+</html>

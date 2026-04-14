@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        /* 1. HEADER FIXO (Camada Intermediária) */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #2d3436;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            /* Z-INDEX 10: Fica acima do texto, mas abaixo do modal */
+            z-index: 10;
+        }
+
+        /* 2. OVERLAY (O fundo escuro do modal) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* Z-INDEX 99: Fica acima do header e de tudo na página */
+            z-index: 99;
+        }
+
+        /* 3. MODAL (O conteúdo na frente de tudo) */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            /* Z-INDEX 100: O número mais alto, vence a disputa visual */
+            z-index: 100;
+        }
+
+        .content {
+            margin-top: 80px;
+        }
+
+        #div1 {
+            background-color: crimson;
+            width: 120px;
+            height: 120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        #div2 {
+            background-color: rgb(121, 80, 255);
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            bottom: 50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">Minha Barra de Navegação (z-index: 10)</header>
+
+    <div class="content">
+        <h1>Conteúdo da Página</h1>
+        <p>Este texto está no fluxo normal. Ele fica por baixo do header e do modal.</p>
+        <p>O z-index padrão é "auto" (que costuma agir como 0).</p>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="modal">
+        <h2>Aviso Importante!</h2>
+        <p>Eu tenho z-index 100, por isso estou na frente de todos.</p>
+        <button
+            onclick="document.querySelector('.modal').style.display='none'; document.querySelector('.overlay').style.display='none';">
+            Entendido
+        </button>
+    </div>    <hr>
+
+    <div id="div2"></div>
+
+    <div id="div1">
+    </div>
+<br><br><br><br><br>
+    <button onclick="alterarPosicao()">Alterar!</button>
+
+</body>
+
+<script>
+    function alterarPosicao(){
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+
+        // Trocar os z-index
+        if (div1.style.zIndex === '10') {
+            div1.style.zIndex = '1';
+            div2.style.zIndex = '10';
+        } else {
+            div1.style.zIndex = '10';
+            div2.style.zIndex = '1';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Simples: Border e Padding</title>
+    <style>
+        /* Estilos base para visualização */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Demonstração de PADDING no <h1> */
+        h1 {
+            /* PADDING: Espaço interno (entre o texto e a borda/fundo) */
+            padding: 50px;
+            background-color: #f7dcf3;
+            /* Para o h1, observe como o padding aumenta a área de fundo */
+            border: 5px solid #ff5733; /* Borda de cor laranja */
+        }
+
+        /* Demonstração de BORDER e aninhamento (Box Model) */
+       
+        /* Div Externa */
+        #minhaDiv {
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+            /* BORDER: Borda de 10px, sólida e azul */
+            border: 10px solid blue;
+            margin-top: 20px;
+        }
+
+        /* Div Interna */
+        #divDentroDiv {
+            width: 250px; /* Largura menor que a div pai */
+            height: 100px;
+            background-color: blanchedalmond;
+            /* BORDER: Borda de 5px, pontilhada e vermelha */
+            border: 5px dotted red;
+           
+            /* PADDING: Espaço interno para o conteúdo da div interna */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Título com Padding e Borda</h1>
+   
+    <div id="minhaDiv">
+        <!-- Div Externa: Borda azul -->
+        <p style="padding: 10px;">Conteúdo da Div Externa</p>
+       
+        <div id="divDentroDiv">
+            <!-- Div Interna: Borda pontilhada vermelha + Padding interno -->
+            Conteúdo da Div Interna com Padding
+        </div>
+    </div>
+</body>
+</html>
+

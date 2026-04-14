@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Texto <span class="in">inline</span> aqui.</p>
+
+    <h3 >Este é um exemplo de uma h3</h3>
+    <h3 class="in">Este é um OUTRO exemplo de uma h3</h3>
+
+    <span class="bl bl1">Bloco 1</span> <span class="bl bl2">Bloco 2</span>
+
+    <div class="bl1 ib">Item 1</div><div class="bl2 ib">Item 2</div>
+
+
+
+</body>
+
+<style>
+.in { display: inline; background: #fce7f3; }
+/* Não aceita width/height ou margin vertical */
+
+.bl { display: block; width: 100%; margin-bottom: 5px; }
+/* Quebra linha e ocupa toda a largura */
+
+.bl1 { background-color: blue; }
+.bl2 { background-color: rgb(184, 248, 105); }
+
+.ib { display: inline-block; width: 120px; height: 80px; }
+    /* Lado a lado, mas aceita dimensões fixas */
+
+
+
+
+
+</style>
+</html>
