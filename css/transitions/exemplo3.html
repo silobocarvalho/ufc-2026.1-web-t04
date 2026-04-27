@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de CSS Transformations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #eef2f3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.5s ease; /* Para suavizar a transformação */
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        .box span {
+            display: block;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* 1. SCALE: Zoom suave */
+        .zoom:hover {
+            transform: scale(1.15);
+            border-color: #3498db;
+            border-width: 3px;
+        }
+
+        /* 2. ROTATE: Giro completo */
+        .girar:hover {
+            transform: rotate(-30deg);
+            background-color: #f1c40f;
+        }
+
+        /* 3. TRANSLATE: Movimento lateral */
+        .mover:hover {
+            transform: translateY(80px);
+            background-color: #e74c3c;
+            color: white;
+            border: solid rgb(77, 255, 50) 5px;
+        }
+
+        /* 4. SKEW: Inclinação/Distorção */
+        .inclinar:hover {
+            transform: skewY(-30deg);
+            background-color: #9b59b6;
+            color: white;
+        }
+
+        /* 5. COMBINADO: Escala + Rotação */
+        .combo:hover {
+            transform: scale(0.8) rotate(-15deg);
+            background-color: #2ecc71;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box zoom">
+        <span>🔍</span>
+        <strong>Scale</strong>
+        <p>Aumenta o tamanho</p>
+    </div>
+
+    <div class="box girar">
+        <span>⚙️</span>
+        <strong>Rotate</strong>
+        <p>Gira o elemento</p>
+    </div>
+
+    <div class="box mover">
+        <span>🚀</span>
+        <strong>Translate</strong>
+        <p>Move para o lado</p>
+    </div>
+
+    <div class="box inclinar">
+        <span>📐</span>
+        <strong>Skew</strong>
+        <p>Distorce os ângulos</p>
+    </div>
+
+    <div class="box combo">
+        <span>✨</span>
+        <strong>Combo</strong>
+        <p>Múltiplas transformações</p>
+    </div>
+
+</body>
+</html>
