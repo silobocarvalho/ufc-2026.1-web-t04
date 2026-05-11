@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="pokemonImg" src="imgs/charmander.png" class="card" onclick="alterarImagem()">
+</body>
+
+<style>
+    .card{
+        width: 200px;
+        height: 200px;
+        border: 3px solid blue;
+    }
+</style>
+
+<script>
+    let pokemonEvolutionSrc = ['imgs/charmander.png', 'imgs/charmeleon.jpg', 'imgs/charizard.png']; 
+    let indice = 0;
+    function alterarImagem(){
+        let pokemonImgHtml = document.getElementById("pokemonImg");
+
+        indice = indice + 1;
+        if(indice >= 3){
+            indice = indice % 3;
+        }
+        pokemonImgHtml.src = pokemonEvolutionSrc[indice];
+
+        if(indice % 2 == 0){
+            pokemonImgHtml.style.border = "3px solid blue";
+        }else{
+            pokemonImgHtml.style.border = "5px solid red";
+        }
+        
+    }
+</script>
+
+</html>

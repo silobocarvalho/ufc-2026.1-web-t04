@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="pokemonImg" src="imgs/charmander.png" class="card" onclick="alterarImagem()">
+</body>
+
+<style>
+    .card{
+        width: 200px;
+        height: 200px;
+        border: 3px solid blue;
+    }
+</style>
+
+<script>
+    let isCharmander = true;
+    function alterarImagem(){
+        let pokemonImgHtml = document.getElementById("pokemonImg");
+
+        if(isCharmander){
+            //altero para o charmeleon
+            pokemonImgHtml.src = "imgs/charmeleon.jpg";
+            isCharmander = false;
+        }else{
+            //altero para o charmander
+            pokemonImgHtml.src = "imgs/charmander.png";
+            isCharmander = true;
+        }
+
+    }
+</script>
+
+</html>
