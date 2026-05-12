@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let nomes = ['Joao', 'Maria', 'Lorena', 'Igor'];
+    let aluno = {   "nome": "Joao", 
+                    "curso": "Engenharia de Software" 
+                }
+
+    for(const nome of nomes){
+        console.log(nome)
+    }    
+    
+    for(const chave in nomes){
+        console.log(chave)
+    }  
+
+    console.log('-------------------------------'); 
+    
+    for(const chave in aluno){
+        console.log(chave)
+        console.log(aluno[chave])
+    }  
+
+</script>
+
+</html>

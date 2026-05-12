@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // Definição do Objeto
+    const usuario = {
+        nome: "Ana",
+        preferencias: {
+            tema: "dark"
+        },
+        endereco: {
+           
+        }
+    };
+    // Acesso com Optional Chaining (?.)
+    // E Nullish Coalescing (??)
+    const rua = usuario?.endereco?.rua ?? "N/A";
+    /* equivalente a
+    if(usuario != null){
+        if(usuario.endereco != null){
+            if(usuario.endereco.rua != null){
+
+            }
+        }
+    }
+    */
+    // Resultado
+    console.log(rua); // "N/A"
+
+</script>
+
+</html>

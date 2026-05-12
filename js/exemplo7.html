@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let alunos = [
+        {"nome": "Joao", "curso": "SI"},
+        {"nome": "Maria", "curso": "SI"},
+        {"nome": "Getulio", "curso": "CC"},
+        {"nome": "Miau", "curso": "ES"},
+        {"nome": "Mia", "curso": "DD"},
+        {"nome": "Nanica", "curso": "ES"},
+    ]
+
+    let alunosES = alunos.filter( (aluno) => {
+        return aluno.curso === "ES"
+        //varias outras linhas de codigo...
+    })
+
+    console.log(alunosES)
+
+    console.log("---------------------------------")
+
+    let alunosComNota = alunos.map( aluno => {
+        let novoAluno = {"nome": aluno.nome, "curso": aluno.curso, "nota": 10};
+        return novoAluno;
+    } )
+
+    console.log(alunosComNota);
+
+    console.log("---------------------------------")
+
+    let somaNotas = alunosComNota.reduce( (acumulador, aluno) => {
+        return acumulador + aluno.nota
+    }, 0)
+
+    console.log(somaNotas / alunosComNota.length)
+
+</script>
+</html>
