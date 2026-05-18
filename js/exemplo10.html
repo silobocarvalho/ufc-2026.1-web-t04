@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="imgPokemon" src="imgs/charmander.png" class="vermelho">
+    <button onclick="alterarClasseImg()">Alterar Classe</button>
+
+    <br><br>
+
+    <p style="display: none;">CONTEUDO DA TAG P</p>
+    <br>
+    <button onclick="alterarTextoP()" >Alterar Texto P</button>
+</body>
+<script>
+    function alterarClasseImg(){
+        let refImgPokemon = document.querySelector("#imgPokemon");
+
+        refImgPokemon.classList.toggle("azul");
+    }
+
+    function alterarTextoP(){
+        //document.querySelector("p").textContent = "NOVO VALOR DE P";
+        //document.querySelector("p").innerHTML = "NOVO VALOR DE P";
+
+        //alert(document.querySelector("p").innerText);
+        console.log("InnerText: " + document.querySelector("p").innerText);
+        console.log("TextContent: " + document.querySelector("p").textContent);
+    }
+
+
+</script>
+
+<style>
+    .vermelho{
+        border: 3px solid red;
+    }
+
+    .azul{
+        border: 10px solid blue;
+    }
+</style>
+</html>

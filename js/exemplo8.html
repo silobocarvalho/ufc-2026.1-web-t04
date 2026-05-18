@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="testarMathMax()">Testar Math.max()</button>
+    <br><br>
+    <button onclick="testarSpreadOp1()">Spread operator 1</button>
+</body>
+
+<script>
+    function testarMathMax(){
+        let args = [1, 2, 66, 4, 5];
+        let valorMaximo = Math.max(...args);
+        console.log(valorMaximo);
+    }
+
+    function testarSpreadOp1(){
+        let nomes1 = ['Joao', 'Maria'];
+        let nomes2 = ['Josefa', 'Josef'];
+
+        console.log(nomes1 + nomes2);
+        console.log(typeof(nomes1 + nomes2));
+
+        let totalNomes = [...nomes1, ...nomes2, "Gabriel"];
+
+        console.log(totalNomes);
+        console.log(typeof(totalNomes));
+
+        let aluno = {'ap1': 8, 'ap2': 7};
+        let alunoComAp3 = {...aluno, 'ap3': 10};
+
+        console.log(aluno);
+        console.log(typeof(aluno));
+        console.log(alunoComAp3);
+        console.log(typeof(alunoComAp3));
+        
+
+    }
+</script>
+</html>
