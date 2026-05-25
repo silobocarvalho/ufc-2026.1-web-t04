@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button id="meu-botao">Clique em mim</button>  
+     <input id="meuInput" type="text" placeholder="Digite algo...">
+</body>
+
+<script>
+    // Passo 1: Pegamos o botão no HTML e guardamos em uma variável
+let botao = document.getElementById("meu-botao");
+// Passo 2: Adicionamos o ouvinte de eventos (o "fofoqueiro")
+botao.addEventListener("click", () => {
+    // Passo 3: O que acontece quando o clique ocorrer?
+    botao.innerText = "Você clicou no botão!";
+    botao.style.backgroundColor = "green";
+    botao.style.color = "white";
+    alert("voce alterou o botao!");
+});
+
+let meuInput = document.getElementById("meuInput");
+meuInput.addEventListener( "change", () => {
+    alert("Valor alterado!");
+} )
+</script>
+
+</html>

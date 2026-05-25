@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="atualizarData()">The time is?</button>
+    <p id="demo"></p>
+    <br><br>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <hr>
+    <input type="text" placeholder="Digite alguma coisa..." onchange="exemploOnChange()">
+    <hr>
+    <img src="imgs/charizard.png" onmouseover="testeOnMouseOver()" onmouseout="testeOnMouseOut()" width="200px" height="200px">
+</body>
+
+<script>
+    function atualizarData(){
+        let meuP = document.getElementById('demo');
+        meuP.innerHTML = Date();
+    }
+
+    function exemploOnChange(){
+        alert("O dado alterou!");
+    }
+
+    function testeOnMouseOver(){
+        alert("onmouseover event!");
+    }
+
+    function testeOnMouseOut(){
+        alert("onmouseOUT event!");
+    }
+
+    
+</script>
+
+</html>

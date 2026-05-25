@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .cardPokemon{
+        width: 150px;
+        height: 150px;
+        border: 2px solid green;
+        
+    }
+    #container{
+        display: grid;
+        /*display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 30px; */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+</style>
+</head>
+<body>
+    <h1>Listagem Pokemons</h1>
+    <div id="container"></div>
+</body>
+
+<script>
+    let numPokemon = 1;
+    let meuHtml = document.getElementsByTagName("HTML")[0];
+    meuHtml.addEventListener("click", () => {
+        let linkPokemon = `https://raw.githubusercontent.com/PokeAPI/sprites/3eee52bd999f586cd03683c4fb3a72ee68dee718/sprites/pokemon/${numPokemon}.png`;
+        let novoPokemonImg = document.createElement("img");
+        novoPokemonImg.src = linkPokemon;
+        novoPokemonImg.classList.add("cardPokemon");
+
+        let minhaDiv = document.getElementById("container");
+        minhaDiv.appendChild(novoPokemonImg);
+        numPokemon++;
+    } )
+
+</script>
+
+</html>
