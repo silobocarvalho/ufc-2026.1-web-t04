@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="downloadDados()">Download Dados</button>
+    <button onclick="verificarStatus()">Verificar Status</button>
+</body>
+
+<script>
+    
+
+    function downloadDados(){
+        const promisseDownloadDados = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+        console.log("Imprimiu objeto promisse");
+        console.log(promisseDownloadDados);
+        
+        promisseDownloadDados.then( (resposta) => {
+            //console.log(resposta);
+
+            resposta.json().then( dadosJson => {
+                //console.log(dadosJson);
+
+                dadosJson.map( produto => {
+                    console.log(produto.name);
+                } )
+
+            } )
+
+        } )
+
+    }
+
+</script>
+
+</html>
